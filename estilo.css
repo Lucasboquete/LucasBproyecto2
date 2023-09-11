@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F3F3F3;
+}
+
+/* Header */
+
+.encabezado {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 2px 4px rgba(94, 182, 22, 0.2);
+}
+
+.encabezado h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(245, 244, 244, 0.5);
+  font-size: 2.5rem;
+}
+
+.naranja {
+  color: #FF9B50;
+}
+
+.boton {
+  background-color: #FF9B50;
+  color: #FAFAFA;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+
+.boton:hover {
+  background-color: black ;
+  color: #FAFAFA;
+  cursor: pointer;
+}
+
+.encabezado li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.encabezado li a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.encabezado li a:hover {
+  color: #FF9B50;
+}
+
+/* Banner */
+
+.banner {
+  background-image: url("images/fondobox.jpg");
+  height: calc(100vh - 100px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.bannerContenido {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.bannerContenido p {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Impact,'Arial Narrow Bold', sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bannerContenido .boton {
+  margin-top: 10px;
+}
+
+/* Entrenamientos */
+
+
+#Entrenacon {
+  text-align: center;
+  margin: 10vh;
+  border-bottom: 1px solid black;
+  font-size: 6rem;
+}
+
+
+.contenedorEntrenamientos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px; 
+}
+
+.tarjeta img {
+  max-width: 100%;
+
+}
+
+.tarjeta p {
+  margin: 10px 0;
+}
+
+.tarjeta button {
+  background-color: #FF9B50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tarjeta button:hover {
+  background-color: #000000;
+}
+
+/*ENTRENADORES*/
+
+#Tituloentrenadores {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+}
+
+.entrenadores {
+  display: flex;
+  margin: 10vh;
+  justify-content: center;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #212121;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footerContenido {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.infoContacto p,
+.redesSociales a {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.redesSociales a {
+  color: #FF9B50;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.redesSociales a:hover {
+  color: white;
+}
+
+
+.footer i {
+  margin-right: 10px;
+}
+
+/***************/
+
+/* Lo hacemos responsive: EL INDEX  */
+
+/*Vista tablet*/
+/*768px hasta 1023px*/
+
+@media (max-width:1023px) {
+  /*Header*/
+
+  .encabezado {
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .encabezado .boton {
+      display: none;
+  }
+
+  /*Banner*/
+
+  .bannerContenido p {
+      font-size: 2rem;
+  }
+
+  /*Entrenamientos*/
+
+  .Entrenamientos p {
+      margin: 5vh;
+      font-size: 2rem;
+  }
+
+  .tarjeta p {
+      font-size: inherit;
+  }
+
+  .contenedorEntrenamientos {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*Guias*/
+
+  .entrenadores {
+      flex-direction: column;
+  }
+
+  /*Footer*/
+
+  .footerContenido {
+      flex-direction: column;
+      text-align: center;
+  }
+
+}
+
+/* Vista móvil (0px hasta 768px) */
+@media (max-width: 414px) {
+  /* Header */
+  .encabezado {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .encabezado .boton {
+    display: none;
+  }
+
+  /* Banner */
+  .bannerContenido p {
+    font-size: 1.5rem;
+  }
+
+  /* Contenedor de Entrenamientos */
+  .galeriamma {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+  
+
+/*GALERIA DE IMAGENES PARA TODOS .SE LLAMA GALERIAMMA PARA TODAS LAS GALERIAS */
+
+ .galeriamma {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+            gap: 10px; /* Espacio entre las imágenes */
+        }
+
+        .imagen {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid black;
+        }
+
+
+
+
+        /* Estilos para la sección de contacto */
+        .seccion-contacto {
+          background-color: #f0f0f0;
+          padding: 20px;
+          text-align: center;
+      }
+
+      /* Estilos para el formulario de contacto */
+      .formulario-contacto {
+          max-width: 400px;
+          margin: 0 auto;
+          text-align: left;
+      }
+
+      .formulario-contacto label,
+      .formulario-contacto textarea {
+          display: block;
+          margin-bottom: 10px;
+      }
+
+      .formulario-contacto input[type="text"],
+      .formulario-contacto input[type="email"],
+      
+      .formulario-contacto textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: 1px solid #FF9B50;
+          border-radius: 4px;
+      }
+
+      .formulario-contacto input[type="submit"] {
+          background-color: #FF9B50;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
